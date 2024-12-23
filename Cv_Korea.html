@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelian Tiket Cv_Korea</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://source.unsplash.com/1600x900/?travel,landscape') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        header {
+            background: rgba(0, 120, 215, 0.8);
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+            font-style: italic;
+        }
+        main {
+            padding: 20px;
+        }
+        form {
+            max-width: 700px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+            box-sizing: border-box;
+        }
+        form input:focus, form select:focus {
+            border-color: #0078D7;
+            box-shadow: 0 0 5px rgba(0, 120, 215, 0.3);
+            outline: none;
+        }
+        form button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #0078D7, #005BB5);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        form button:hover {
+            background: linear-gradient(135deg, #005BB5, #003F91);
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #0078D7;
+        }
+        .form-header p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #0078D7;
+        }
+        .price-container {
+            max-width: 700px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .price-container h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #0078D7;
+        }
+        .price-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .price-container table th, .price-container table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        .price-container table th {
+            background: #0078D7;
+            color: white;
+        }
+        .price-container table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        #total-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #0078D7;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pembelian Tiket Online</h1>
+        <p>Travel Cv_Korea</p>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="login.html" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="price-container">
+            <h2>Daftar Harga</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kota Keberangkatan</th>
+                        <th>Kota Tujuan</th>
+                        <th>Harga (Rp)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dharmasraya</td>
+                        <td>Padang</td>
+                        <td>180,000</td>
+                    </tr>
+                    <tr>
+                        <td>Padang</td>
+                        <td>Dharmasraya</td>
+                        <td>180,000</td>
+                    </tr>
+                    <tr>
+                        <td>Solok</td>
+                        <td>Dharmasraya</td>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <td>Dharmasraya</td>
+                        <td>Solok</td>
+                        <td>150,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <form action="submit.html" method="POST">
+            <div class="form-header">
+                <h2>Formulir Pemesanan</h2>
+                <p>Isi data di bawah untuk memesan tiket Anda</p>
+            </div>
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+            <label for="phone">Nomor Telepon</label>
+            <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon" required>
+
+            <label for="departure">Kota Keberangkatan</label>
+            <select id="departure" name="departure" required>
+                <option value="">-- Pilih Kota --</option>
+                <option value="Padang">Padang</option>
+                <option value="Dharmasraya">Dharmasraya</option>
+                <option value="Solok">Solok</option>
+            </select>
+
+            <label for="destination">Kota Tujuan</label>
+            <select id="destination" name="destination" required>
+                <option value="">-- Pilih Kota --</option>
+                <option value="Padang">Padang</option>
+                <option value="Dharmasraya">Dharmasraya</option>
+                <option value="Solok">Solok</option>
+            </select>
+
+            <label for="date">Tanggal Keberangkatan</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Jam Keberangkatan</label>
+            <select id="time" name="time" required>
+                <option value="">-- Pilih Jam --</option>
+                <option value="08:00">08:00</option>
+                <option value="10:00">10:00</option>
+                <option value="14:00">14:00</option>
+                <option value="18:00">18:00</option>
+            </select>
+
+            <label for="passengers">Jumlah Penumpang</label>
+            <input type="number" id="passengers" name="passengers" placeholder="Masukkan jumlah penumpang" min="1" required>
+
+            <div id="total-price">Total Harga: Rp 0</div>
+
+            <button type="submit">Pesan Tiket</button>
+        </form>
+    </main>
+    <script>
+        const prices = {
+            'Dharmasraya-Padang': 180000,
+            'Padang-Dharmasraya': 180000,
+            'Solok-Dharmasraya': 150000,
+            'Dharmasraya-Solok': 150000
+        };
+
+        const departure = document.getElementById('departure');
+        const destination = document.getElementById('destination');
+        const passengers = document.getElementById('passengers');
+        const totalPriceDisplay = document.getElementById('total-price');
+
+        function updateTotalPrice() {
+            const departureValue = departure.value;
+            const destinationValue = destination.value;
+            const passengersValue = parseInt(passengers.value) || 0;
+
+            const routeKey = `${departureValue}-${destinationValue}`;
+            const pricePerPassenger = prices[routeKey] || 0;
+            const totalPrice = pricePerPassenger * passengersValue;
+
+            totalPriceDisplay.textContent = `Total Harga: Rp ${totalPrice.toLocaleString('id-ID')}`;
+        }
+
+        departure.addEventListener('change', updateTotalPrice);
+        destination.addEventListener('change', updateTotalPrice);
+        passengers.addEventListener('input', updateTotalPrice);
+    </script>
+</body>
+</html>
